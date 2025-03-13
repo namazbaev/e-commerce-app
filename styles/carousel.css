@@ -1,0 +1,31 @@
+.carousel--products {
+    padding: 0;
+    filter: none;
+    background-color: transparent;
+}
+
+.carousel--products .carousel__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-lg);
+}
+
+.carousel--products .carousel__container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel--products .carousel__slide {
+    scroll-snap-align: start;
+    min-width: calc(100% - var(--spacing-md));
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .carousel--products .carousel__slide {
+        min-width: calc(50% - var(--spacing-md));
+    }
+}

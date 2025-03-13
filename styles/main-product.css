@@ -1,0 +1,89 @@
+.product-header {
+    background: white;
+    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-xl);
+}
+
+.product-header__title {
+    font-weight: var(--weight-bold);
+    font-size: var(--font-xl);
+    line-height: var(--font-3xl);
+    color: var(--color-default);
+    margin-bottom: var(--spacing-sm);
+}
+
+.product-header__info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    font-size: var(--font-sm);
+}
+
+.product-header__availability {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-weight: var(--weight-medium);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--spacing-sm);
+    background-color: var(--color-primary-opacity);
+}
+
+.product-header__availability--in-stock {
+    background-color: #E8F5E9;
+    color: #4CAF50;
+}
+
+.product-header__code {
+    color: var(--color-text-gray);
+    font-weight: var(--weight-medium);
+}
+
+.product-header__price-container {
+    margin: var(--spacing-lg) 0;
+}
+
+.product-header__price {
+    font-size: var(--font-xxl);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    line-height: 1;
+    margin: 0;
+}
+
+.product-header__price-unit {
+    font-size: var(--font-sm);
+    font-weight: var(--weight-semi-bold);
+}
+
+.product-header__actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.product-header__button {
+    flex: 1;
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-header__button--primary {
+    color: white;
+    font-size: var(--font-md);
+    line-height: var(--font-3xl);
+    font-weight: var(--weight-semi-bold);
+    background-color: var(--color-primary);
+}
+
+.product-header__button--chat {
+    flex: 0 0 auto;
+    width: 56px;
+    background-color: var(--color-primary-opacity);;
+    color: var(--color-primary);
+}
