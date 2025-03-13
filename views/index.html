@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Platform</title>
+
+    <!-- CSS imports -->
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/variables.css">
+    <link rel="stylesheet" href="../styles/product-gallery.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/payment.css">
+    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="../styles/product-card-compact.css">
+    <link rel="stylesheet" href="../styles/product-section.css">
+    <link rel="stylesheet" href="../styles/section.css">
+    <link rel="stylesheet" href="../styles/spec-section.css">
+    <link rel="stylesheet" href="../styles/drawer.css">
+    <link rel="stylesheet" href="../styles/main-product.css">
+    <link rel="stylesheet" href="../styles/form.css">
+    <link rel="stylesheet" href="../styles/tags.css">
+    <link rel="stylesheet" href="../styles/seller-profile.css">
+    <link rel="stylesheet" href="../styles/confirmation.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="header__menu-icon">
+        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9H1C0.734784 9 0.48043 8.8946 0.292893 8.7071C0.105357 8.5196 0 8.2652 0 8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H19C19.2652 7 19.5196 7.10536 19.7071 7.29289C19.8946 7.48043 20 7.73478 20 8C20 8.2652 19.8946 8.5196 19.7071 8.7071C19.5196 8.8946 19.2652 9 19 9ZM19 2H1C0.734784 2 0.48043 1.89464 0.292893 1.70711C0.105357 1.51957 0 1.26522 0 1C0 0.73478 0.105357 0.48043 0.292893 0.29289C0.48043 0.10536 0.734784 0 1 0H19C19.2652 0 19.5196 0.10536 19.7071 0.29289C19.8946 0.48043 20 0.73478 20 1C20 1.26522 19.8946 1.51957 19.7071 1.70711C19.5196 1.89464 19.2652 2 19 2ZM19 16H1C0.734784 16 0.48043 15.8946 0.292893 15.7071C0.105357 15.5196 0 15.2652 0 15C0 14.7348 0.105357 14.4804 0.292893 14.2929C0.48043 14.1054 0.734784 14 1 14H19C19.2652 14 19.5196 14.1054 19.7071 14.2929C19.8946 14.4804 20 14.7348 20 15C20 15.2652 19.8946 15.5196 19.7071 15.7071C19.5196 15.8946 19.2652 16 19 16Z" fill="#344054"/>
+        </svg>
+    </div>
+    <div class="header__search">
+        <span class="header__search-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="#344054" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+        <input type="text" class="header__search-input" placeholder="Искать на Glotr">
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav">
+    <a href="#" class="nav__item">Описание</a>
+    <a href="#" class="nav__item nav__item--active">Характеристики</a>
+    <a href="#" class="nav__item">Продавец</a>
+    <a href="#" class="nav__item">Отзывы</a>
+</nav>
+
+<!-- Main content -->
+<main id="app">
+    <div id="product-gallery-container"></div>
+
+    <!-- Product info -->
+    <div id="product-info-container"></div>
+    <!-- Main product -->
+    <div id="main-product-container"></div>
+
+    <!-- Product sections -->
+    <div id="product-sections-container"></div>
+
+    <!-- Specs section -->
+    <section class="specs">
+        <h1 class="specs__title">Характеристики</h1>
+
+        <div class="specs__list" id="specs-list"></div>
+
+        <button class="toggle" type="button">
+            <span class="toggle-text">Показать все</span>
+            <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </section>
+    <!-- Payment section -->
+    <section class="payment">
+        <h2 class="payment__title">Способы оплаты</h2>
+
+        <ul class="payment__list" id="payment-list"></ul>
+
+        <button class="toggle" type="button">
+            <span class="toggle-text">Подробно</span>
+            <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </section>
+
+    <!-- Delivery section -->
+    <section class="delivery">
+        <h2 class="delivery__title">Способы доставки</h2>
+
+        <ul class="delivery__list" id="delivery-list"></ul>
+
+        <button class="toggle" type="button">
+            <span class="toggle-text">Подробно</span>
+            <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6L8 11L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </section>
+
+    <section class="seller-profile product section" id="seller-profile"></section>
+
+    <!-- Similar products -->
+    <div id="similar-products-container"></div>
+
+    <!-- Recommended products -->
+    <div id="recommended-products-container"></div>
+
+    <!-- Search tags section -->
+    <section class="trends">
+        <div class="trends__header">
+            <h2 class="trends__title">У нас ищут</h2>
+            <a href="#" class="trends__more">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+        <div class="trends__list" id="trendsList"></div>
+    </section>
+</main>
+
+<!-- Order Confirmation modal component -->
+<div class="modal" id="order-modal">
+    <div class="modal__header">
+        <h2 class="modal__title">Подтвердите заказ</h2>
+        <button class="modal__close" id="close-modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36358 18.6364C5.01211 18.2849 5.01211 17.7151 5.36358 17.3636L10.7272 12L5.36358 6.6364C5.01211 6.28493 5.01211 5.71508 5.36358 5.36361C5.71505 5.01213 6.2849 5.01213 6.63637 5.36361L12 10.7272L17.3636 5.36361C17.7151 5.01213 18.2849 5.01213 18.6364 5.36361C18.9878 5.71508 18.9878 6.28493 18.6364 6.6364L13.2728 12L18.6364 17.3636C18.9878 17.7151 18.9878 18.2849 18.6364 18.6364C18.2849 18.9879 17.7151 18.9879 17.3636 18.6364L12 13.2728L6.63637 18.6364C6.2849 18.9879 5.71505 18.9879 5.36358 18.6364Z" fill="#344054"/>
+            </svg>
+        </button>
+    </div>
+    <div class="modal__content">
+        <div id="order-form" class="form"></div>
+        <div id="order-confirmation" style="display: none;"></div>
+    </div>
+</div>
+
+<script src="../data/product.js"></script>
+<script src="../utils/formatter.js"></script>
+<script src="../components/product-card.js"></script>
+<script src="../components/product-gallery.js"></script>
+<script src="../components/products-section.js"></script>
+<script src="../components/product-card-compact.js"></script>
+<script src="../components/main-product.js"></script>
+<script src="../components/form.js"></script>
+<script src="../components/confirmation.js"></script>
+<script src="../components/drawer.js"></script>
+<script src="../components/seller-profile.js"></script>
+<script src="../components/app.js"></script>
+</body>
+</html>
