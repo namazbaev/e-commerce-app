@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-card);
+    z-index: var(--z-modal);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    overflow-y: auto;
+}
+
+.modal--visible {
+    transform: translateX(0);
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-text-gray1);
+}
+
+.modal__title {
+    color: var(--color-default);
+    font-size: var(--font-xl);
+    font-weight: var(--weight-bold);
+}
+
+.modal__close {
+    font-size: var(--font-xl);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__content {
+    padding: var(--spacing-xxl) var(--spacing-lg);
+}
+
+.modal__back {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-primary);
+}
+
+.modal__back-icon {
+    margin-right: var(--spacing-md);
+}
